@@ -1,3 +1,3 @@
-const Banco = require('./Banco');
+const Car = require('./Car');
 
-Banco.sync({force: true});
+Car.sync({force: true});

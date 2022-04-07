@@ -1,6 +1,6 @@
 const sequelize = require('./bd');
 const Sequelize = require('sequelize');
-const Banco = sequelize.define('bancoJeff', {
+const Banco = sequelize.define('cars', {
         id:{
             type:Sequelize.INTEGER,
             primaryKey: true,
@@ -13,10 +13,10 @@ const Banco = sequelize.define('bancoJeff', {
             type: Sequelize.STRING
         },
         renavam: {
-            type: Sequelize.DATE
+            type: Sequelize.STRING
         },
         modelo: {
-            type: Sequelize.FLOAT
+            type: Sequelize.STRING
         },
         marca: {
             type: Sequelize.STRING

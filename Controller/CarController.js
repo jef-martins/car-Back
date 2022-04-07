@@ -15,7 +15,6 @@ class CarController {
     async add(req) {
         let status = 201;
         let res;
-
         const response = await CarModel.create({
             placa: req.placa,
             chassi: req.chassi,
@@ -68,7 +67,7 @@ class CarController {
 
     async delete(id) {
         let status = 204;
-        let res;
+        let res = 'Excluído com sucesso!';
         await CarModel.destroy({
             where: { id: id }
         }).catch(error => { status = 422; res = error });
