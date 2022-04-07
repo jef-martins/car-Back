@@ -1,6 +1,5 @@
 const car = require("../Server/services");
 const CarController = require('../Controller/CarController');
-//const bodyParser = require("body-parser");
 const formatacao = require("../validators/formatacao");
 const {validacaoBody, validacaoParam} = require("../validators/validacao");
 const validacaoMessage = require("../validators/validacaoMessage");
