@@ -15,7 +15,7 @@ class CarController {
     async add(req) {
         let status = 201;
         let res;
-        console.log(req)
+        
         const response = await CarModel.create({
             placa: req.placa,
             chassi: req.chassi,

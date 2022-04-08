@@ -7,6 +7,15 @@ chai.use(chaiAsPromised);
 const expect = chai.expect;
 const c = new CarController();
 
+const req = {
+    placa: 'placa',
+    chassi: 'chassi',
+    renavam: 'renavam',
+    modelo: 'modelo',
+    marca: 'marca',
+    ano: 'ano'
+}
+
 describe('CarsControllers', () => {
     describe('list()', () => {
         it('deveria ser um object', () => {
@@ -18,7 +27,7 @@ describe('CarsControllers', () => {
 
     describe('add()', () => {
         it('deveria ser um object', () => {
-            return c.add().then(value=>{
+            return c.add(req).then(value=>{
                 expect(value).to.be.a('object');
             }); 
         });
@@ -34,7 +43,7 @@ describe('CarsControllers', () => {
     
     describe('update()', () => {
         it('deveria ser um object', () => {
-            return c.update().then(value=>{
+            return c.update(req).then(value=>{
                 expect(value).to.be.a('object');
             }); 
         });
