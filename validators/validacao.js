@@ -4,7 +4,7 @@ const validacaoBody = [
     body('placa', 'campo invalido').notEmpty(),
     body('chassi', 'campo invalido').notEmpty(),
     body('renavam', 'campo invalido').notEmpty(),
-    body('modelo', 'campo invalido').isNumeric(),
+    body('modelo', 'campo invalido').notEmpty(),
     body('marca', 'campo invalido').notEmpty(),
     body('ano', 'campo invalido').notEmpty()
 ];
