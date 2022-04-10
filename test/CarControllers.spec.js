@@ -39,7 +39,7 @@ describe('CarsControllers', () => {
     
     describe('select()', () => {
         it('deveria conter um objeto contendo um number e um object', () => {
-            return c.select(15).then(value=>{
+            return c.select(1).then(value=>{
                 expect(value).to.be.a('object');
                 expect(value.status).to.be.a('number');
                 expect(value.data.dataValues).have.keys('id', 'placa', 'chassi', 'renavam', 'modelo', 'marca', 'ano', 'createdAt', 'updatedAt');
@@ -49,7 +49,7 @@ describe('CarsControllers', () => {
     
     describe('update()', () => {
         it('deveria conter um objeto contendo um number e um object', () => {
-            return c.update(req, 15).then(value=>{
+            return c.update(req, 1).then(value=>{
                 expect(value).to.be.a('object');
                 expect(value.status).to.be.a('number');
                 expect(value.data.dataValues).have.keys('id', 'placa', 'chassi', 'renavam', 'modelo', 'marca', 'ano', 'createdAt', 'updatedAt');
@@ -59,7 +59,7 @@ describe('CarsControllers', () => {
     
     describe('delete()', () => {
         it('deveria ser um object e um number', () => {
-            return c.delete(13).then(value=>{
+            return c.delete(35).then(value=>{
                 expect(value).to.be.a('object');
                 expect(value.status).to.be.a('number');
             }); 
