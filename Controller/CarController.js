@@ -4,7 +4,7 @@ class CarController {
 
     async list() {
         let status = 200;
-        let res;
+        let res = [];
         const response = await CarModel.findAll({order: ['id']}).catch(error => { status = 422; res = error });
         if (response)
             res = response;
@@ -14,7 +14,7 @@ class CarController {
 
     async add(req) {
         let status = 201;
-        let res;
+        let res = {};
         
         const response = await CarModel.create({
             placa: req.placa,
@@ -33,7 +33,7 @@ class CarController {
 
     async select(id) {
         let status = 200;
-        let res;
+        let res = {};
 
         const response = await CarModel.findByPk(id).catch(error => { status = 422; res = error });
 
@@ -45,7 +45,7 @@ class CarController {
 
     async update(req, id) {
         let status = 201;
-        let res;
+        let res = {};
 
         const response = await CarModel.update({
             placa: req.placa,
@@ -68,7 +68,7 @@ class CarController {
 
     async delete(id) {
         let status = 204;
-        let res;
+        let res = {};
         await CarModel.destroy({
             where: { id: id }
         }).catch(error => { status = 422; res = error });
